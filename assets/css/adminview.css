@@ -1,0 +1,52 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: #080710 !important;
+}
+
+table {
+    margin: 15px 0 0 0;
+    background-color: rgba(255, 255, 255, 0.13);
+    color: white;
+}
+
+.title td {
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 500;
+}
+
+
+/* header */
+
+header {
+    background-color: rgba(255, 255, 255, 0.13);
+    padding: 10px;
+}
+
+header .logo h3 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+header .logo h3 {
+    margin-right: 5px;
+    font-size: 32px;
+    -webkit-text-stroke: .5px #fff;
+    color: transparent;
+}
+
+.button a {
+    font-size: 25px;
+}
+
+
+/* header */

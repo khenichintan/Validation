@@ -1,0 +1,141 @@
+<form method="post"  id="mytestform">
+	<table border="1">
+		<tr>
+			<td>Enter Name</td>
+			<td><input type="text" name="name" id="name"><span style="color:red;" id="error_name"></span></td>
+		</tr>
+
+		<tr>
+			<td>Enter Email</td>
+			<td><input type="text" name="email" id="email"><span style="color:red;" id="error_email"></span></td>
+		</tr>
+
+		<tr>
+			<td>Enter Password</td>
+			<td><input type="text" name="pass" id="pass"></td>
+		</tr>
+
+		<tr>
+			<td>Enter Phone</td>
+			<td><input type="text" id="phone" onkeypress="return isNumber(event)"></td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><input type="submit" value="submit" ></td>
+		</tr>
+	</table>
+</form>
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script>
+
+jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+});
+$( "#mytestform" ).validate({
+  rules: {
+    name: {
+      required: true,
+      minlength : 2
+    },
+    email : {
+    	required : true,
+    	email : true
+    },
+    pass : {
+    	required : true,
+    	pwcheck : true
+    }
+  },
+  messages : {
+  	name :{
+  		required : "<span style='color:red'>Name is required</span>",
+  		minlength : "<span style='color:red'>minimum 2 characters required</span>",
+	},
+	email : {
+		required : "<span style='color:red'>Email is required</span>",
+		email : "<span style='color:red'>Email is not valid</span>",
+	},
+	pass :{
+		required : "<span style='color:red'>Password is required</span>",
+		pwcheck : "<span style='color:red'>7 to 15 characters which contain only characters, numeric digits, underscore and first character must be a letter</span>",
+	}
+  }
+});
+
+ jQuery.validator.addMethod("pwcheck",
+            function(value, element) {
+                return /^[A-Za-z]\w{7,14}$/.test(value);
+  });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function valid()
+{
+	var name = document.getElementById('name').value;
+	var email = document.getElementById('email').value;
+	var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(name=='')
+	{
+		// alert("name is required");
+		document.getElementById('error_name').innerHTML = "name is required";
+		// document.getElementById('name').style.border ="5px solid red"; 
+		document.getElementById('name').focus();
+		return false;
+	}
+	else if(name.length <3)
+	{
+		document.getElementById('error_name').innerHTML = "Minimum 3 or more character required";
+		// document.getElementById('name').style.border ="5px solid red"; 
+		document.getElementById('name').focus();
+		return false;
+	}
+	else if(email == '')
+	{
+		document.getElementById('error_name').innerHTML = "";
+		document.getElementById('error_email').innerHTML = "Email is required";
+		document.getElementById('name').focus();
+		return false;
+	}
+	else if(!email.match(mailFormat))
+	{
+		document.getElementById('error_name').innerHTML = "";
+		document.getElementById('error_email').innerHTML = "Enter valid email";
+		document.getElementById('name').focus();
+		return false;
+	}
+	else{
+		alert("Record success");
+		return true;
+	}
+}
+
+
+
+function isNumber(evt) {
+    
+    var charCode =  evt.keyCode;
+    if ((charCode >= 48 && charCode <=57)) {
+        return true;
+    }
+    return false;
+}
+
+</script>

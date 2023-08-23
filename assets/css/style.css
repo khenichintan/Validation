@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.w-2 {
+    width: 50%;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: #080710 !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* header */
+
+header {
+    background-color: rgba(255, 255, 255, 0.13);
+    padding: 10px;
+}
+
+header .logo h3 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+header .logo h3 {
+    margin-right: 5px;
+    font-size: 32px;
+    -webkit-text-stroke: .5px #fff;
+    color: transparent;
+}
+
+.button a {
+    font-size: 25px;
+}
+
+
+/* header end */
+
+textarea {
+    display: block !important;
+}
+
+form {
+    height: 600px;
+    width: 950px;
+    background-color: rgba(255, 255, 255, 0.13);
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 22px rgba(8, 7, 16, 0.6);
+    padding: 20px 45px;
+}
+
+form * {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.form-1 {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.form-2 {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.form-1 input,
+.form-2 input {
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 1px solid white;
+    outline: none;
+    padding: 10px 0px;
+}
+
+.form-1 textarea,
+.form-2 textarea {
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 1px solid white;
+    outline: none;
+    padding: 10px 0px;
+}
+
+.form-1 label,
+.form-2 label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+input {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::placeholder {
+    color: #e5e5e5;
+}
+
+input [type="checkbox"] {
+    padding: 0 10px;
+}
+
+textarea {
+    padding: 0 10px;
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+select {
+    background-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+.select-selected option {
+    background-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+option {
+    color: black;
+}
